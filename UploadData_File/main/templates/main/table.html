@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Display Data</title>
+		<style>
+		table, td, th 
+		{border : 1px solid black; border-collapse: collapse; padding:10px}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+			{% for i in header_line %}
+			<th>{{ i }}</th>
+			{%  endfor %}
+			</tr>
+			{% for i in data %}
+			<tr>
+			{% for j in i %}
+			<td>{{ j }}</td>
+			{%  endfor %}
+			</tr>
+			{%  endfor %}
+		</table>
+	</body>
+</html>
